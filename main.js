@@ -40,15 +40,21 @@ function new_Image(get_Image) {
 
     fabric.Image.fromURL(get_Image , function(Img){
     
-        player_object = Img;
+      block_image_object = Img;
     
-        player_object.scaleToWidth(block_image_width);
+      block_image_object.scaleToWidth(block_image_width);
     
-        player_object.scaleToHeight(block_image_height);
-    
+      block_image_object.scaleToHeight(block_image_height);
+        
+      block_image_object.set({
 
+         top:player_y,
+     
+         left:player_x
+     
+         });
     
-        canvas.add(player_object);
+        canvas.add(block_image_object);
         
     });
     
